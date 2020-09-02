@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+import { DataStorageService } from '../shared/data-storage.service';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent  {
+  constructor(private dataStorageService: DataStorageService){
+
+  }
+
+  // tslint:disable-next-line: typedef
+  onSaveData(){
+    this.dataStorageService.storeRecipes();
+  }
+
+  // tslint:disable-next-line: typedef
+  onFetchData(){
+    this.dataStorageService.fetchRecipes().subscribe();
+  }
+
+// tslint:disable-next-line: typedef
+onLogout(){
+  }
+}
