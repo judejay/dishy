@@ -1,3 +1,3 @@
 # dishy
- Bare project
+Angular 10 web app 
 "# RecipeHelper" 
