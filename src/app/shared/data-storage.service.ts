@@ -15,7 +15,7 @@ export class DataStorageService implements OnDestroy{
   // tslint:disable-next-line: typedef
   storeRecipes(){
     const recipes = this.recipeService.getRecipes();
-    this.http.put('https://test-8e907.firebaseio.com/recipes.json',
+    this.http.put('https:{ your server}/recipes.json',
        recipes)
        .subscribe(response => {
          console.log(response);
@@ -26,7 +26,7 @@ export class DataStorageService implements OnDestroy{
   fetchRecipes() {
     return this.http
       .get<Recipe[]>(
-        'https://test-8e907.firebaseio.com/recipes.json'
+        'https://{ your server}/recipes.json'
       )
       .pipe(
         map(recipes => {
